@@ -27,3 +27,13 @@ addGlass.addEventListener('click', () => {
   console.log(counter);
   counterField.innerHTML = counter;
 });
+
+removeGlass.addEventListener('click', () => {
+  if (counter > 0) {
+    counter = counter - 1;
+  }
+  else {
+    counter = 0;
+  }
+  counterField.innerHTML = counter;
+});
