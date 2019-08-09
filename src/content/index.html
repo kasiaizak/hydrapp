@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
-    <meta name="description" content="Description" />
+    <title>HydrApp</title>
+    <meta name="description" content="Aplikacja do zliczania wypitych szklanek wody w ciągu dnia" />
 
     <!-- Title -->
     <meta property="og:title" content="" />
@@ -14,7 +14,7 @@
     <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
     <meta property="og:url" content="" />
     <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+    <meta property="og:image" content="" />
 
     <link rel="manifest" href="manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -25,7 +25,15 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <h1>Hello world - with simple PWA support!</h1>
+    <header class="header"><h1 class="header__title">hydrApp</h1></header>
+    <main class="glass">
+      <div class="glass__image">
+        <span class="glass__value">8</span>
+      </div>
+      <button class="glass__addButton">dodaj szklankę</button>
+      <button class="glass__removeButton">usuń szklankę</button>
+    </main>
+    <footer class="footer">Made by <a href="http://www.kasiaizak.pl">Kasia Izak</a></footer>
 
     <script src="js/main.js"></script>
   </body>
