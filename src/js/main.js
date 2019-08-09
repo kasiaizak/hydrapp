@@ -16,7 +16,6 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
-
-console.log(`Hello world!`);
-
-
+const value = document.querySelector('.glass__value--js');
+const addGlass = document.querySelector('.glass__addButton--js');
+const removeGlass = document.querySelector('.glass__removeButton--js');
