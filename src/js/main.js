@@ -16,24 +16,35 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
-const counterField = document.querySelector('.glass__value--js');
+let counterField = document.querySelector('.glass__value--js');
 const addGlass = document.querySelector('.glass__addButton--js');
 const removeGlass = document.querySelector('.glass__removeButton--js');
+const key = new Date().toISOString().slice(0, 10);
 
-let counter = 0;
+// set counterField to last localstorage key or create new key = 0
+if (localStorage.getItem(key)) {
+  counterField.innerHTML = parseInt(localStorage.getItem(key));
+} else {
+  localStorage.setItem(key, 0);
+  counterField.innerHTML = 0;
+}
 
-addGlass.addEventListener('click', () => {
-  counter = counter + 1;
-  console.log(counter);
-  counterField.innerHTML = counter;
-});
+addGlass.addEventListener('click', (e) => {
+  // localStorage key is a string, it have to be parse to a number
+  const counter = parseInt(localStorage.getItem(key));
+  localStorage.setItem(key, counter + 1);
+  counterField.innerHTML = parseInt(localStorage.getItem(key));
+})
 
 removeGlass.addEventListener('click', () => {
+  // localStorage key is a string, it have to be parse to a number
+  const counter = parseInt(localStorage.getItem(key));
   if (counter > 0) {
-    counter = counter - 1;
+    localStorage.setItem(key, counter - 1);
+    counterField.innerHTML = parseInt(localStorage.getItem(key));
   }
   else {
-    counter = 0;
+    localStorage.setItem(key, 0);
+    counterField.innerHTML = 0;
   }
-  counterField.innerHTML = counter;
 });
