@@ -33,6 +33,7 @@ body {
     @include center;
     background-image: url(../assets/img/water-glass.png);
     height: 280px;
+    margin-bottom: 48px;
     position: relative;
     width: 280px;
   }
@@ -41,11 +42,16 @@ body {
     color: #000000;
     font-weight: 500;
     font-size: 112px;
-    //line-height: 280px;
     padding-top: 114px;
     padding-bottom: 68px;
     text-align: center;
   }
 }
 
-// .footer {}
+.footer {
+  position: absolute;
+  bottom: 10px;
+  a {
+    color: $gray;
+  }
+}
