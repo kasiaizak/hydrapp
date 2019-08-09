@@ -28,7 +28,12 @@ body {
 .glass {
   @include center;
   // $__addButton {}
-  // &__image {}
+  &__image {
+    background-image: url(../assets/img/water-glass.png);
+    height: 280px;
+    position: relative;
+    width: 280px;
+  }
   // &__removeButton {}
   // &__value {}
 }
