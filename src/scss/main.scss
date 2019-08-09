@@ -16,7 +16,9 @@ body {
   color: $gray;
   background: $blue;
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   font-style: normal;
+  font-weight: 500;
   height: 100vh;
   padding: 10px;
   width: 100vw;
@@ -28,7 +30,12 @@ body {
 
 .glass {
   @include center;
-  // $__addButton {}
+  &__addButton {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 12px 32px;
+  }
   &__image {
     @include center;
     background-image: url(../assets/img/water-glass.png);
@@ -37,10 +44,9 @@ body {
     position: relative;
     width: 280px;
   }
-  // &__removeButton {}
+  &__removeButton {}
   &__value {
     color: #000000;
-    font-weight: 500;
     font-size: 112px;
     padding-top: 114px;
     padding-bottom: 68px;
