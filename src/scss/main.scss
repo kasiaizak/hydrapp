@@ -12,27 +12,25 @@ html {
 }
 
 body {
-  align-items: center;
+  @include center;
   color: $gray;
   background: $blue;
-  display: flex;
-  flex-direction: column;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
-  justify-content: center;
   padding: 10px;
   width: 100vw;
 }
 
 // .header {
-//   $__title {}
+//   &__title {}
 // }
 
-// .glass {
-//   $__addButton {}
-//   $__image {}
-//   $__removeButton {}
-//   $__value {}
-// }
+.glass {
+  @include center;
+  // $__addButton {}
+  // &__image {}
+  // &__removeButton {}
+  // &__value {}
+}
 
 // .footer {}
