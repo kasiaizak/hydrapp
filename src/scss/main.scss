@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=latin-ext');
 
 
 html {
@@ -11,8 +12,16 @@ html {
 }
 
 body {
+  align-items: center;
   color: $gray;
   background: $blue;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  padding: 10px;
+  width: 100vw;
 }
 
 // .header {
