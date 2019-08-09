@@ -16,6 +16,14 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
-const value = document.querySelector('.glass__value--js');
+const counterField = document.querySelector('.glass__value--js');
 const addGlass = document.querySelector('.glass__addButton--js');
 const removeGlass = document.querySelector('.glass__removeButton--js');
+
+let counter = 0;
+
+addGlass.addEventListener('click', () => {
+  counter = counter + 1;
+  console.log(counter);
+  counterField.innerHTML = counter;
+});
