@@ -17,8 +17,10 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 let counterField = document.querySelector('.glass__value--js');
-const addGlass = document.querySelector('.glass__addButton--js');
-const removeGlass = document.querySelector('.glass__removeButton--js');
+const addGlass = document.querySelector('.glass__buttonAdd--js');
+const removeGlass = document.querySelector('.glass__actions--remove-js');
+const viewHistory = document.querySelector('.glass__actions--history-js');
+const history = document.querySelector('.glass__history--js');
 const key = new Date().toISOString().slice(0, 10);
 
 // set counterField to last localstorage key or create new key = 0
@@ -29,7 +31,7 @@ if (localStorage.getItem(key)) {
   counterField.innerHTML = 0;
 }
 
-addGlass.addEventListener('click', (e) => {
+addGlass.addEventListener('click', () => {
   // localStorage key is a string, it have to be parse to a number
   const counter = parseInt(localStorage.getItem(key));
   localStorage.setItem(key, counter + 1);
@@ -46,5 +48,14 @@ removeGlass.addEventListener('click', () => {
   else {
     localStorage.setItem(key, 0);
     counterField.innerHTML = 0;
+  }
+});
+
+viewHistory.addEventListener('click', () => {
+  //history.classList.toggle('glass__history');
+  for (let i = 0; i < localStorage.length; i++) {
+    const date = localStorage.key(i);
+    const counter = localStorage.getItem(date);
+    //history.innerHTML += `<p>Dzień: ${date}, wypitych szklanek: ${counter}</p>`;
   }
 });
