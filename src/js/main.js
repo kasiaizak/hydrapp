@@ -21,7 +21,7 @@ const addGlass = document.querySelector('.glass__buttonAdd--js');
 const removeGlass = document.querySelector('.glass__actions--remove-js');
 const viewHistory = document.querySelector('.glass__actions--history-js');
 const history = document.querySelector('.glass__history--js');
-const key = new Date().toISOString().slice(0, 10);
+const key = new Date().toLocaleDateString().slice(0, 10);
 
 // set counterField to last localstorage key or create new key = 0
 if (localStorage.getItem(key)) {
