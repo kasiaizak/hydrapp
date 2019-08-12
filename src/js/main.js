@@ -51,7 +51,7 @@ removeGlass.addEventListener('click', () => {
   }
 });
 
-for (let i = 0; i < (localStorage.length - 1); i++) {
+for (let i = 0; i < localStorage.length; i++) {
   const date = localStorage.key(i);
   const counter = localStorage.getItem(date);
   history.innerHTML += `<li>Dzień: <strong>${date}</strong>, wypitych szklanek: <strong>${counter}</strong></li>`;
