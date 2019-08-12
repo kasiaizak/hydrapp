@@ -51,6 +51,13 @@ body {
     font-size: 18px;
     padding: 12px 32px;
   }
+  &__history {
+    display: none;
+    line-height: 18px;
+    &--view {
+      display: initial;
+    }
+  }
   &__image {
     @include center;
     background-image: url(../assets/img/water-glass.png);
