@@ -51,17 +51,19 @@ removeGlass.addEventListener('click', () => {
   }
 });
 
-for (let i = 0; i < localStorage.length; i++) {
-  const date = localStorage.key(i);
-  const counter = localStorage.getItem(date);
-  history.innerHTML += `<li>Dzień: <strong>${date}</strong>, wypitych szklanek: <strong>${counter}</strong></li>`;
-}
-
 viewHistory.addEventListener('click', () => {
   history.classList.toggle('glass__history--view');
   if (history.classList.contains('glass__history--view')) {
     viewHistory.innerHTML = 'ukryj historię';
+    history.innerHTML = '<ul class="glass__history--list-js">';
+    for (let i = 0; i < localStorage.length; i++) {
+      const historyList = document.querySelector('.glass__history--list-js');
+      const date = localStorage.key(i);
+      const counter = localStorage.getItem(date);
+      historyList.innerHTML += `<li>Dzień: <strong>${date}</strong>, wypitych szklanek: <strong>${counter}</strong></li>`;
+    }
   } else {
     viewHistory.innerHTML = 'zobacz historię';
+    history.removeChild();
   }
 });
