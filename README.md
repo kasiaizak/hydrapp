@@ -1,10 +1,12 @@
+# HydrApp
+
 ![cover](https://kasiaizak.github.io/hydrapp/assets/cover.png)
 
-# HydrApp
+## Opis aplikacji
 
 HydrApp to aplikacja PWA do zliczania wypitych dziennie szklanek wody. Strona do przechowywania danych wykorzystuje localStorage - [widok on-line](https://kasiaizak.github.io/hydrapp/).
 
-## Wykorzystane technologie:
+## Wykorzystane technologie
 
 HTML5, CSS3 (w tym flexbox) z użyciem preprocesora SASS oraz JavaScript.
 
@@ -12,7 +14,7 @@ HTML5, CSS3 (w tym flexbox) z użyciem preprocesora SASS oraz JavaScript.
 
 Jeśli nie masz jeszcze zainstalowanego Node.js to nic straconego... :) Tu znajduje się instalka i można szybko to nadrobić: [oficjalna strona Node.js](https://nodejs.org/en/).
 
-W konsoli (terminialu) uruchomionej z uprawnieniami administratora (Windows) lub z dodanym `sudo` przed komendą (Mac) wpisujemy poniższe polecenie w celu instalacji tzw. *task runnera* GULP. Polecenie wykonujemy raz na danej maszynie, czyli jeśli robiłeś/aś to już wcześniej to pomiń ten krok i poniższą komendę.
+W konsoli (terminalu) uruchomionej z uprawnieniami administratora (Windows) lub z dodanym `sudo` przed komendą (Mac) wpisujemy poniższe polecenie w celu instalacji tzw. *task runnera* GULP. Polecenie wykonujemy raz na danej maszynie, czyli jeśli robiłeś/aś to już wcześniej to pomiń ten krok i poniższą komendę.
 
 `npm install -g gulp-cli`
 
@@ -28,5 +30,4 @@ Po sklonowaniu repozytorium na swój komputer wchodzimy do głównego katalogu p
 
 #### Kończenie pracy
 
-Aby przerwać pracę *gulpa* wściskamy kombinację klawiszy **CTRL** + **C**.
-
+Aby przerwać pracę *gulp* wciskamy kombinację klawiszy **CTRL** + **C**.
