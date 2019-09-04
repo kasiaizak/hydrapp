@@ -31,9 +31,14 @@ if (!localStorage.getItem(key)) {
 }
 
 addGlass.addEventListener('click', () => {
-  const counter = parseInt(localStorage.getItem(key));
-  localStorage.setItem(key, counter + 1);
-  counterField.innerHTML = parseInt(localStorage.getItem(key));
+  if (!localStorage.getItem(key)) {
+    localStorage.setItem(key, 1);
+    counterField.innerHTML = 1;
+  } else {
+    const counter = parseInt(localStorage.getItem(key));
+    localStorage.setItem(key, counter + 1);
+    counterField.innerHTML = parseInt(localStorage.getItem(key));
+  }
 })
 
 removeGlass.addEventListener('click', () => {
@@ -48,13 +53,20 @@ viewHistory.addEventListener('click', () => {
   history.classList.toggle('glass__history--view');
   if (history.classList.contains('glass__history--view')) {
     viewHistory.innerHTML = 'ukryj historię';
-    history.innerHTML = '<ul class="glass__history--list-js">';
+    history.innerHTML = '<ul class="glass__history--list-js"></ul><div class="glass__history--container"><button class="glass__history--clear glass__history--clear-js">wyczyść historię</button></div>';
     for (let i = 0; i < localStorage.length; i++) {
       const historyList = document.querySelector('.glass__history--list-js');
       const date = localStorage.key(i);
       const counter = localStorage.getItem(date);
       historyList.innerHTML += `<li>Dzień: <strong>${date}</strong>, wypitych szklanek: <strong>${counter}</strong></li>`;
     }
+    const clearHistory = document.querySelector('.glass__history--clear-js');
+    clearHistory.addEventListener('click', () => {
+      localStorage.clear();
+      counterField.innerHTML = 0;
+      history.classList.toggle('glass__history--view');
+      viewHistory.innerHTML = 'zobacz historię';
+    });
   } else {
     viewHistory.innerHTML = 'zobacz historię';
     history.removeChild();
