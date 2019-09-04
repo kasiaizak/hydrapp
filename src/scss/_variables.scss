@@ -7,3 +7,23 @@ $gray: #F5E5E7;
   flex-direction: column;
   justify-content: center;
 }
+
+@mixin resetButtonStyle {
+  align-items: unset;
+  background: unset;
+  border: unset;
+  color: unset;
+  cursor: pointer;
+  display: unset;
+  font: unset;
+  letter-spacing: unset;
+  line-height: unset;
+  margin: unset;
+  padding: unset;
+  text-align: unset;
+  text-indent: unset;
+  text-rendering: auto;
+  text-shadow: unset;
+  word-spacing: unset;
+  writing-mode: unset;
+}

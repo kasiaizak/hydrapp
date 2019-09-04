@@ -36,11 +36,16 @@ body {
   @include center;
   &__actions {
     color: $gray;
-    cursor: pointer;
     margin-top: 38px;
     & span {
       color: #000;
       padding: 0 5px;
+    }
+    &--remove {
+      @include resetButtonStyle;
+    }
+    &--history {
+      @include resetButtonStyle;
     }
   }
   &__buttonAdd {
@@ -54,6 +59,13 @@ body {
   &__history {
     display: none;
     line-height: 18px;
+    &--clear {
+      @include resetButtonStyle;
+      color: yellow;
+    }
+    &--container {
+      text-align: center;
+    }
     &--view {
       display: initial;
     }
