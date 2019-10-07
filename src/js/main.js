@@ -16,6 +16,15 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
+import browserUpdate from 'browser-update';
+browserUpdate({
+  required: {e:14,f:-6,o:-6,s:-2,c:-6},
+  insecure:true,
+  unsupported:true,
+  reminder:0,
+  reminderClosed: 1
+});
+
 const counterField = document.querySelector('.glass__value--js');
 const addGlass = document.querySelector('.glass__buttonAdd--js');
 const removeGlass = document.querySelector('.glass__actions--remove-js');
