@@ -1,14 +1,12 @@
-# HydrApp
-
 ![cover](https://kasiaizak.github.io/hydrapp/assets/cover.png)
 
-## Opis aplikacji
+# HydrApp
 
 HydrApp to aplikacja PWA do zliczania wypitych dziennie szklanek wody. Strona do przechowywania danych wykorzystuje localStorage - [widok on-line](https://kasiaizak.github.io/hydrapp/).
 
-## Wykorzystane technologie
+## Użyte technologie
 
-HTML5, CSS3 (w tym flexbox) z użyciem preprocesora SASS oraz JavaScript.
+HTML5, CSS3 (w tym Flexbox) z użyciem preprocesora Sass oraz JavaScript ES6.
 
 ## Uruchomienie strony lokalnie z podglądem zmian na żywo (dla developerów korzystających z Node.js)
 
