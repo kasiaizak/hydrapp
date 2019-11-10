@@ -1,4 +1,4 @@
-![cover](https://kasiaizak.github.io/hydrapp/assets/cover.png)
+![cover](https://raw.githubusercontent.com/kasiaizak/hydrapp/master/src/assets/cover.jpg)
 
 # HydrApp
 
