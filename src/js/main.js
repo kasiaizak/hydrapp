@@ -25,6 +25,11 @@ browserUpdate({
   reminderClosed: 1
 });
 
+const autor = 'Kasia Izak';
+console.log(`Hej, nazywam się ${autor} i jestem autorką tej strony.
+Fajnie, że nie boisz się zaglądać do konsoli! ;-)`);
+
+
 const counterField = document.querySelector('.glass__value--js');
 const addGlass = document.querySelector('.glass__buttonAdd--js');
 const removeGlass = document.querySelector('.glass__actions--remove-js');
