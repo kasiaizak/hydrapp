@@ -2,7 +2,7 @@
 
 # HydrApp
 
-HydrApp to aplikacja PWA do zliczania wypitych dziennie szklanek wody. Strona do przechowywania danych wykorzystuje localStorage - [widok on-line](https://kasiaizak.github.io/hydrapp/).
+HydrApp to aplikacja PWA do zliczania wypitych dziennie szklanek wody. Strona do przechowywania danych wykorzystuje localStorage - [widok on-line](https://hydrapp.kasiaizak.pl/).
 
 ## Użyte technologie
 
