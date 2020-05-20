@@ -437,7 +437,9 @@ body {
     text-align: center; }
 
 .footer {
-  margin: 24px auto 10px; }
+  line-height: 1.618;
+  margin: 24px auto 10px;
+  text-align: center; }
   .footer a {
     color: #F5E5E7; }
   .footer__heart {
