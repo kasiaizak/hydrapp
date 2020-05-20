@@ -90,7 +90,9 @@ body {
 }
 
 .footer {
+  line-height: 1.618;
   margin: 24px auto 10px;
+  text-align: center;
   a {
     color: $gray;
   }
